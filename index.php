@@ -76,6 +76,40 @@
 
 
         /*
+            $query  = $connection->query("SELECT * from Question");
+            $questions = $query->fetchAll(PDO::FETCH_ASSOC);
+            foreach($questions as $question) {
+                $subQuery  = $connection->prepare("SELECT * from Answer where Answer.QuestionId = ?");
+                $subQuery->bindValue(1, $question['Id']);
+                $subQuery->execute(); 
+                $answers = $subQuery->fetchAll(PDO::FETCH_ASSOC);
+                $question['answers'] = $answers;
+                print "<pre/>";            
+                print_r($question);
+                //print_r($question['answers'][0]);
+            }    
+
+            print "<h1>Example with FETCH_NUM</h1>";
+
+            $query  = $connection->query("SELECT * from Question");
+            $questions = $query->fetchAll(PDO::FETCH_NUM);
+            foreach($questions as $question) {
+                print "<pre/>";            
+                print_r($question);
+            }    
+
+            print "<h1>Example with FETCH_BOTH</h1>";
+
+            $query  = $connection->query("SELECT * from Question");
+            $questions = $query->fetchAll(PDO::FETCH_BOTH);
+            foreach($questions as $question) {
+                print "<pre/>";            
+                print_r($question);
+            }      
+        */
+
+
+        /*
         //this section will select all the tables in your database.
         //if there are any tables, they will be displayed as a list, otherwise there will be an error message
 
@@ -100,7 +134,12 @@
 
         $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $dbConnection->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+
           */
+
+
+
+
     ?>
     
 </body>
