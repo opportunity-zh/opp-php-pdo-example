@@ -11,7 +11,7 @@ This branch contains a basic LEMP stack running on Docker and orchestrated by Do
 
 ## Prerequisites
 
-Make sure [Docker Desktop for Mac or PC](https://www.docker.com/products/docker-desktop) is installed and running, or head [over here](https://docs.docker.com/install/) if you are a Linux user. You will also need a terminal running [Git](https://git-scm.com/).
+Make sure Docker and Docker Compose is installed and running. You will also need a terminal running.
 
 This setup also uses localhost's port 8000 for Nginx, so make sure it is available.
 
@@ -28,7 +28,7 @@ $ cd opp-php-pdo-example
 Run the following command:
 
 ```
-$ docker-compose up -d
+$ docker compose up -d
 ```
 
 This may take a little bit of time, as some Docker images might need downloading.
