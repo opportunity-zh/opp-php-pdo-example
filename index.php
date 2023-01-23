@@ -26,7 +26,7 @@
         $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);        
 
         // prepare and execute the select statements
-        $sqlStatement = $dbConnection->query("select * from Books");
+        $sqlStatement = $dbConnection->query("select * from books");
 
         echo '<div class="container-fluid p-5">';
 
